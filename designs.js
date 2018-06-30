@@ -11,7 +11,7 @@ $('#sizePicker').on('submit',function(event) {
   height = $('#inputHeight').val();
   width = $('#inputWeight').val();
   color=$('#colorPicker').val();
-  makeGride(height, width);
+  makeGrid(height, width);
 
 });
 
