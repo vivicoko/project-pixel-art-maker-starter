@@ -31,7 +31,8 @@ $('td').click(function addColor(){
   } else{
     $(this).css('background-color', color);
                
-    
+  
+}
                  
   }
 
