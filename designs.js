@@ -6,29 +6,33 @@
 function makeGrid() {
 
 // Your code goes here!
-$('#sizePicker').submit(function(event) {
+$('#sizePicker').on('submit',function(event) {
   event.preventDefault();
   height = $('#inputHeight').val();
   width = $('#inputWeight').val();
+  color=$('#colorPicker').val();
   makeGride(height, width);
 
 });
 
 function makeGrid(num, y) {
-  
-  for (var x=1; x<=num; x++){
-  $('#pixelCanvas').append('<td></td>');
+  $('tr').remove();
+  for (var a=1; a<=num; a++){
+  $('#pixelCanvas').append('<tr id=table'+a+'></tr>');
+    for (b=1; b<=y; b++){
+      $('tr'),filter(':last').append('<td></td>');
+    }
   }
-}
+
 $('td').click(function addColor(){
   color = $('#colorPicker').val();
   if ($(this).attr('style')){
   $(this).removeAttr('style')
   } else{
-    $(this).attr('style', 'background-color:' + color);
+    $(this).css('background-color', color);
                
     
-                 }
+                 
   }
 
 });
